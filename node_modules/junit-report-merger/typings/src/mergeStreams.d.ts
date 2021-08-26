@@ -1,0 +1,6 @@
+export var mergeStreams: MergeStreamsFn;
+export type MergeStreamsOptions = {};
+export type TMergeStreamsCallback = (err?: Error) => void;
+export type MergeStreamsCallbackStyle = (destStream: import('stream').Writable, srcStreams: import('stream').Readable[], options: MergeStreamsOptions, cb: TMergeStreamsCallback) => void;
+export type MergeStreamsPromiseStyle = (destStream: import('stream').Writable, srcStreams: import('stream').Readable[], options?: MergeStreamsOptions) => Promise<void>;
+export type MergeStreamsFn = MergeStreamsCallbackStyle & MergeStreamsPromiseStyle;

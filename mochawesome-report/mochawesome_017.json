@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T06:32:36.176Z",
+    "end": "2021-08-03T06:32:40.052Z",
+    "duration": 3876,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bb22b524-a01b-44e6-9bc5-88634fd26933",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Test6.js",
+      "file": "cypress/integration/examples/Test6.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c035e8ad-2f5b-4b53-ab58-46b8704e90ac",
+          "title": "Download Pdf",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Download Pdf",
+              "fullTitle": "Download Pdf Download Pdf",
+              "timedOut": null,
+              "duration": 3818,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const pdfUrl = 'http://www.pdf995.com/samples/pdf.pdf'; // ADDED: \"encodeBodyToBase64: true\"\ncy.request({\n  url: pdfUrl,\n  gzip: false,\n  encodeBodyToBase64: true\n}).then(response => {\n  const fileName = 'test';\n  const filePath = 'temp/' + fileName + '.pdf';\n  cy.writeFile(filePath, response.body, {\n    encoding: 'binary',\n    decodeContentFromBase64: true // ADDED\n  });\n});",
+              "err": {},
+              "uuid": "850e7a4e-881f-4f2c-a2d4-f2c402dab7d9",
+              "parentUUID": "c035e8ad-2f5b-4b53-ab58-46b8704e90ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "850e7a4e-881f-4f2c-a2d4-f2c402dab7d9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3818,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

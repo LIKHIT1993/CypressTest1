@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.8670" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-08-26T08:09:33" tests="0" file="cypress/integration/examples/Checkbox.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Testing checkboxes and Dropdowns" timestamp="2021-08-26T08:09:33" tests="1" time="7.8670" failures="0">
+    <testcase name="Testing checkboxes and Dropdowns Testing checkboxes and Dropdowns" time="7.8670" classname="Testing checkboxes and Dropdowns">
+    </testcase>
+  </testsuite>
+</testsuites>

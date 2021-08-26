@@ -1,0 +1,48 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run --record --key a2468757-133d-4a76-97a6-ff9f2ba39dba",
+    "runtests": "npm run test",
+    "cypress:open": "node_modules/.bin/cypress open",
+    "dev": "node_modules/.bin/start-test 7074 cypress:open",
+    "start": "node app_server.js --port 7074 & node auth_server.js --port 7075",
+    "clean:reports": "if exist cypress\\reports rmdir /q /s cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "@babel/register": "^7.6.2",
+    "@cypress/browserify-preprocessor": "^2.1.1",
+    "cypress-dashboard": "^3.1.4",
+    "cypress-downloadfile": "^1.2.1",
+    "electron-rebuild": "^1.8.6",
+    "junit-report-merger": "^3.0.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@bahmutov/cy-api": "^1.5.0",
+    "@cypress/commit-message-install": "^3.1.3",
+    "@neuralegion/cypress-har-generator": "^5.2.3",
+    "cypress": "^8.3.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-mochawesome-reporter": "^2.2.1",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.0.3",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}

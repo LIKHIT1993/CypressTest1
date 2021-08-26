@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T06:29:48.066Z",
+    "end": "2021-08-03T06:29:48.859Z",
+    "duration": 793,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ddf3778-d49d-4936-939c-0cc212d271ac",
+      "title": "",
+      "fullFile": "cypress/integration/APITest/delete.js",
+      "file": "cypress/integration/APITest/delete.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39b48a56-85d8-48f6-99c3-faff3417b73c",
+          "title": "Post method - API testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST-Test Case 1",
+              "fullTitle": "Post method - API testing POST-Test Case 1",
+              "timedOut": null,
+              "duration": 765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var pattern = \"edrtyuiolkjhgfghjklrtyuioithjkjhgfdghjk\";\nfor (var i = 0; i < 10; i++) {\n  randomText += pattern.charAt(Math.floor(Math.random() * pattern.length));\n  testmail = randomText + \"@globallogic.com\";\n}\ncy.fixture('createuser').then(payload => {\n  cy.request({\n    method: 'POST',\n    url: 'https://gorest.co.in/public/v1/users',\n    headers: {\n      'Authorization': \"Bearer c9d973d5ad1873f8ec285061b200fbc592582f5a429cf179f7b7382e9a0ca193\"\n    },\n    body: {\n      /*\"name\" :\"Test Automation\",\n       \"gender\" :\"male\",\n       //\"email\" :\"likhit1234@gmail.com\",\n       \"email\" : testmail,\n       \"status\" :\"active\" */\n      /*\"name\" :datajson.name,\n      \"gender\" :datajson.gender,\n      \"email\" : testmail,\n      \"status\" :datajson.status */\n      \"name\": payload.name,\n      \"gender\": payload.gender,\n      \"email\": testmail,\n      \"status\": payload.status\n    }\n  }).then(res => {\n    cy.log(JSON.stringify(res));\n    expect(res.status).to.eq(201); //expect(res.body.data).has.property('email','likhit1234@gmail.com'),\n    /*expect(res.body.data).has.property('email',testmail),\n    expect(res.body.data).has.property('name','Test Automation'),\n    expect(res.body.data).has.property('gender','male'),\n    expect(res.body.data).has.property('status','active')*/\n    expect(res.body.data).has.property('email', testmail), expect(res.body.data).has.property('name', datajson.name), expect(res.body.data).has.property('gender', datajson.gender), expect(res.body.data).has.property('status', datajson.status);\n  }).then(res => {\n    const userid = res.body.data.id;\n    cy.log(\"user id is\" + userid);\n    cy.request({\n      method: 'Delete',\n      url: 'https://gorest.co.in/public/v1/users/' + userid,\n      headers: {\n        'Authorization': \"Bearer c9d973d5ad1873f8ec285061b200fbc592582f5a429cf179f7b7382e9a0ca193\"\n      }\n    });\n  });\n});",
+              "err": {},
+              "uuid": "88976d07-6b26-4cbb-87e9-fec31f5ff3ca",
+              "parentUUID": "39b48a56-85d8-48f6-99c3-faff3417b73c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "88976d07-6b26-4cbb-87e9-fec31f5ff3ca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 765,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

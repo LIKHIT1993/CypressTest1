@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.6820" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-08-26T08:08:16" tests="0" file="cypress/integration/APITest/Oauth.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Oauth feature apis" timestamp="2021-08-26T08:08:16" tests="3" time="3.6820" failures="0">
+    <testcase name="Oauth feature apis Unlock the Barn Test" time="1.5570" classname="Unlock the Barn Test">
+    </testcase>
+    <testcase name="Oauth feature apis Put the Toilet Seat Down Test" time="1.0750" classname="Put the Toilet Seat Down Test">
+    </testcase>
+    <testcase name="Oauth feature apis Chicekn Feed Test" time="1.0500" classname="Chicekn Feed Test">
+    </testcase>
+  </testsuite>
+</testsuites>

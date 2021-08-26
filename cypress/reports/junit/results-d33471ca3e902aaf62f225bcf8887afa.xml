@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.1190" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-08-26T08:09:48" tests="0" file="cypress/integration/examples/Delete_Test.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Docket Delete Test" timestamp="2021-08-26T08:09:48" tests="1" time="1.1190" failures="0">
+    <testcase name="Docket Delete Test Should delete a specific Todo" time="1.1190" classname="Should delete a specific Todo">
+    </testcase>
+  </testsuite>
+</testsuites>

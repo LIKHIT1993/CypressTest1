@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T06:32:14.765Z",
+    "end": "2021-08-03T06:32:15.141Z",
+    "duration": 376,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bce95ece-632e-4358-8949-f579e4b13d5d",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Parse_pdf.js",
+      "file": "cypress/integration/examples/Parse_pdf.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b88ab0d3-4a4c-4603-a2df-5797f7841875",
+          "title": "Example to demonstrate file download in cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "File Download using cypress-downloadfile npm package",
+              "fullTitle": "Example to demonstrate file download in cypress File Download using cypress-downloadfile npm package",
+              "timedOut": null,
+              "duration": 297,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.downloadFile('http://www.africau.edu/images/default/sample.pdf', 'cypress/fixtures/Download', 'test.pdf');\ncy.readFile('cypress/fixtures/Download/test.pdf').should('contain', 'A Simple PDF File');",
+              "err": {},
+              "uuid": "194def03-8942-46ae-abc5-4070e7f4fe02",
+              "parentUUID": "b88ab0d3-4a4c-4603-a2df-5797f7841875",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "194def03-8942-46ae-abc5-4070e7f4fe02"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 297,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

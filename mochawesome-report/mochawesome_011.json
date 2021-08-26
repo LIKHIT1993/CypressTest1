@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-03T06:31:57.397Z",
+    "end": "2021-08-03T06:32:05.995Z",
+    "duration": 8598,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77a5f294-82ed-4ceb-a1d4-419c0dddde5f",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Get_Test.spec.js",
+      "file": "cypress/integration/examples/Get_Test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6fcd4a10-056d-450f-a466-5c895a001fac",
+          "title": "Docket GET Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should retrieve a list of Todo items",
+              "fullTitle": "Docket GET Test Should retrieve a list of Todo items",
+              "timedOut": null,
+              "duration": 8545,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Failed screenshot\",\n  \"value\": \"screenshots\\\\examples\\\\Get_Test.spec.js\\\\Docket GET Test -- Should retrieve a list of Todo items (failed).png\"\n}",
+              "code": "cy.request({\n  url: \"https://docket-test.herokuapp.com/api/Todo/\",\n  headers: {\n    token: \"8d11bde6-4db7-4bab-9abf-0894e734ddc0\"\n  }\n}).its(\"body\").should(\"have.length\", 2);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: expected { Object (message) } to have property 'length'",
+                "estack": "AssertionError: Timed out retrying after 8000ms: expected { Object (message) } to have property 'length'\n    at Context.eval (http://localhost:61675/__cypress/tests?p=cypress\\integration\\examples\\Get_Test.spec.js:107:20)",
+                "diff": null
+              },
+              "uuid": "b4caf99f-a79b-4cc6-8fab-3d993031509b",
+              "parentUUID": "6fcd4a10-056d-450f-a466-5c895a001fac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b4caf99f-a79b-4cc6-8fab-3d993031509b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8545,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

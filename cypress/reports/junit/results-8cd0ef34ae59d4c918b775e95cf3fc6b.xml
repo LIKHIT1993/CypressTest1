@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.0310" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-08-26T08:09:14" tests="0" file="cypress/integration/examples/Alert.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Testing Alert" timestamp="2021-08-26T08:09:14" tests="1" time="12.0310" failures="0">
+    <testcase name="Testing Alert Testing Alert" time="12.0310" classname="Testing Alert">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="9.0700" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-08-26T08:08:31" tests="0" file="cypress/integration/APITest/WeatherAPI.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Check weather information" timestamp="2021-08-26T08:08:31" tests="2" time="9.0700" failures="0">
+    <testcase name="Check weather information Get weather information for cities" time="1.3430" classname="Get weather information for cities">
+    </testcase>
+    <testcase name="Check weather information Get weather information for all cities" time="7.7270" classname="Get weather information for all cities">
+    </testcase>
+  </testsuite>
+</testsuites>

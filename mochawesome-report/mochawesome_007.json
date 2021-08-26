@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T06:31:10.785Z",
+    "end": "2021-08-03T06:31:26.133Z",
+    "duration": 15348,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8bb79921-4423-4ce2-a7cf-1acea550d6e6",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Alert.js",
+      "file": "cypress/integration/examples/Alert.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ade22dda-6b04-4736-9c9d-6536f0f6c9b3",
+          "title": "Testing Alert",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testing Alert",
+              "fullTitle": "Testing Alert Testing Alert",
+              "timedOut": null,
+              "duration": 13456,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://qaclickacademy.com/practice.php\");\ncy.get('#alertbtn').click();\ncy.get('[value=\"Confirm\"]').click(); //window:alert\ncy.on('window:alert', str => {\n  //Mocha\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n});\ncy.on('window:confirm', str => {\n  //Mocha\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n});\ncy.get('#opentab').invoke('removeAttr', 'target').click(); //cy.url().should('include','qaclickacademy')\ncy.go('back');",
+              "err": {},
+              "uuid": "750becaf-be07-4346-91c9-cae31a0027da",
+              "parentUUID": "ade22dda-6b04-4736-9c9d-6536f0f6c9b3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "750becaf-be07-4346-91c9-cae31a0027da"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13456,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

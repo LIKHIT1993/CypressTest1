@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T06:30:55.157Z",
+    "end": "2021-08-03T06:30:55.816Z",
+    "duration": 659,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7f6e6104-6af8-47c0-9edb-bc3e44e2f279",
+      "title": "",
+      "fullFile": "cypress/integration/APITest/put.js",
+      "file": "cypress/integration/APITest/put.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e6479f79-d55c-479a-b557-9f6ff630a060",
+          "title": "Post method - API testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST-Test Case 1",
+              "fullTitle": "Post method - API testing POST-Test Case 1",
+              "timedOut": null,
+              "duration": 592,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var pattern = \"edrtyuiolkjhgfghjklrtyuioithjkjhgfdghjk\";\nfor (var i = 0; i < 10; i++) {\n  randomText += pattern.charAt(Math.floor(Math.random() * pattern.length));\n  testmail = randomText + \"@globallogic.com\";\n}\ncy.fixture('createuser').then(payload => {\n  cy.request({\n    method: 'POST',\n    url: 'https://gorest.co.in/public/v1/users',\n    headers: {\n      'Authorization': \"Bearer c9d973d5ad1873f8ec285061b200fbc592582f5a429cf179f7b7382e9a0ca193\"\n    },\n    body: {\n      /*\"name\" :\"Test Automation\",\n       \"gender\" :\"male\",\n       //\"email\" :\"likhit1234@gmail.com\",\n       \"email\" : testmail,\n       \"status\" :\"active\" */\n      /*\"name\" :datajson.name,\n      \"gender\" :datajson.gender,\n      \"email\" : testmail,\n      \"status\" :datajson.status */\n      \"name\": payload.name,\n      \"gender\": payload.gender,\n      \"email\": testmail,\n      \"status\": payload.status\n    }\n  }).then(res => {\n    cy.log(JSON.stringify(res));\n    expect(res.status).to.eq(201); //expect(res.body.data).has.property('email','likhit1234@gmail.com'),\n    /*expect(res.body.data).has.property('email',testmail),\n    expect(res.body.data).has.property('name','Test Automation'),\n    expect(res.body.data).has.property('gender','male'),\n    expect(res.body.data).has.property('status','active')*/\n    expect(res.body.data).has.property('email', testmail), expect(res.body.data).has.property('name', datajson.name), expect(res.body.data).has.property('gender', datajson.gender), expect(res.body.data).has.property('status', datajson.status);\n  }).then(res => {\n    const userid = res.body.data.id;\n    cy.log(\"user id is\" + userid);\n    cy.request({\n      method: 'put',\n      url: 'https://gorest.co.in/public/v1/users/' + userid,\n      headers: {\n        'Authorization': \"Bearer c9d973d5ad1873f8ec285061b200fbc592582f5a429cf179f7b7382e9a0ca193\"\n      },\n      body: {\n        \"name\": \"Test Automation Labs\",\n        \"email\": 'likhit' + testmail,\n        \"gender\": \"female\",\n        \"status\": \"active\"\n      }\n    }).then(res => {\n      expect(res.status).to.eq(200);\n      expect(res.body.data).has.property('id', userid), expect(res.body.data).has.property('email', 'likhit' + testmail), expect(res.body.data).has.property('name', 'Test Automation Labs'), expect(res.body.data).has.property('gender', 'female'), expect(res.body.data).has.property('status', 'active');\n    }).then(res => {\n      const userid = res.body.data.id;\n      cy.log(\"user id is\" + userid);\n      cy.request({\n        method: 'Get',\n        url: 'https://gorest.co.in/public/v1/users/' + userid,\n        headers: {\n          'Authorization': \"Bearer c9d973d5ad1873f8ec285061b200fbc592582f5a429cf179f7b7382e9a0ca193\"\n        }\n      }).then(res => {\n        expect(res.status).to.eq(200);\n        expect(res.body.data).has.property('id', userid), expect(res.body.data).has.property('email', 'likhit' + testmail), expect(res.body.data).has.property('name', 'Test Automation Labs'), expect(res.body.data).has.property('gender', 'female'), expect(res.body.data).has.property('status', 'active');\n      });\n    });\n  });\n});",
+              "err": {},
+              "uuid": "d4baa406-e1ca-40af-adb0-8e70035db223",
+              "parentUUID": "e6479f79-d55c-479a-b557-9f6ff630a060",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d4baa406-e1ca-40af-adb0-8e70035db223"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 592,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T06:32:20.607Z",
+    "end": "2021-08-03T06:32:20.923Z",
+    "duration": 316,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2164eebb-a018-4ee4-a48d-70a7de51e8a9",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Put_Test.spec.js",
+      "file": "cypress/integration/examples/Put_Test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1d1f6cad-df39-4e24-bf0f-1a26c14a508a",
+          "title": "Docket Put Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should modify an excisting Todo item",
+              "fullTitle": "Docket Put Test Should modify an excisting Todo item",
+              "timedOut": null,
+              "duration": 273,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://docket-test.herokuapp.com/api/Todo/\",\n  headers: {\n    token: \"8d11bde6-4db7-4bab-9abf-0894e734ddc0\"\n  },\n  body: {\n    Username: \"Bobby McBobFace\",\n    \"Email Address\": \"bobface@test.com\",\n    Password: \"secretz121\"\n  }\n}).its(\"status\").should(\"be.ok\");",
+              "err": {},
+              "uuid": "fd80bb3a-2489-421e-b163-8695414348c2",
+              "parentUUID": "1d1f6cad-df39-4e24-bf0f-1a26c14a508a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd80bb3a-2489-421e-b163-8695414348c2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 273,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T06:30:58.893Z",
+    "end": "2021-08-03T06:31:06.884Z",
+    "duration": 7991,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "901b7a69-dafe-4002-b2af-0474ff7351b2",
+      "title": "",
+      "fullFile": "cypress/integration/APITest/WeatherAPI.js",
+      "file": "cypress/integration/APITest/WeatherAPI.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8bd083fe-576e-4c25-85e9-685c022eb16f",
+          "title": "Check weather information",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get weather information for cities",
+              "fullTitle": "Check weather information Get weather information for cities",
+              "timedOut": null,
+              "duration": 1382,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  Method: 'GET',\n  url: 'https://www.metaweather.com/api/location/search/?query=san',\n  headers: {\n    'Authorization': \"Bearer c9d973d5ad1873f8ec285061b200fbc592582f5a429cf179f7b7382e9a0ca193\"\n  }\n}).then(res => {\n  const city = res.body[0].title;\n  return city;\n}).then(city => {\n  cy.request({\n    method: 'Get',\n    url: 'https://www.metaweather.com/api/location/search/?query=' + city\n  }).then(resp => {\n    expect(resp.status).to.eq(200);\n    expect(resp.body[0]).to.have.property('title', city);\n  });\n});",
+              "err": {},
+              "uuid": "532054b9-eb17-47fd-87d6-acd6baf26b35",
+              "parentUUID": "8bd083fe-576e-4c25-85e9-685c022eb16f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get weather information for all cities",
+              "fullTitle": "Check weather information Get weather information for all cities",
+              "timedOut": null,
+              "duration": 6592,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  Method: 'GET',\n  url: 'https://www.metaweather.com/api/location/search/?query=Am',\n  headers: {\n    'Authorization': \"Bearer c9d973d5ad1873f8ec285061b200fbc592582f5a429cf179f7b7382e9a0ca193\"\n  }\n}).then(res => {\n  const location = res.body;\n  return location;\n}).then(location => {\n  for (let i = 0; i < location.length; i++) {\n    cy.request({\n      method: 'Get',\n      url: 'https://www.metaweather.com/api/location/search/?query=' + location[i].title\n    }).then(resp => {\n      expect(resp.status).to.eq(200);\n      expect(resp.body[0]).to.have.property('title', location[i].title);\n    });\n  }\n});",
+              "err": {},
+              "uuid": "bff875af-4b09-4d0d-aebc-78e4df409acc",
+              "parentUUID": "8bd083fe-576e-4c25-85e9-685c022eb16f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "532054b9-eb17-47fd-87d6-acd6baf26b35",
+            "bff875af-4b09-4d0d-aebc-78e4df409acc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

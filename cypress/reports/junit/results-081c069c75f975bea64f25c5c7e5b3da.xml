@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.5120" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-08-26T08:10:26" tests="0" file="cypress/integration/examples/Parse_pdf.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Example to demonstrate file download in cypress" timestamp="2021-08-26T08:10:26" tests="1" time="0.5120" failures="0">
+    <testcase name="Example to demonstrate file download in cypress File Download using cypress-downloadfile npm package" time="0.5120" classname="File Download using cypress-downloadfile npm package">
+    </testcase>
+  </testsuite>
+</testsuites>

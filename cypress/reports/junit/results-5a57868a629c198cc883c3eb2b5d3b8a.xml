@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.2930" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-08-26T08:10:31" tests="0" file="cypress/integration/examples/Post_Test.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Docket Post Test" timestamp="2021-08-26T08:10:31" tests="1" time="0.2930" failures="0">
+    <testcase name="Docket Post Test Should create a Todo item" time="0.2930" classname="Should create a Todo item">
+    </testcase>
+  </testsuite>
+</testsuites>
